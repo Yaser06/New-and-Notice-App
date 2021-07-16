@@ -9,14 +9,11 @@ import java.util.Date;
 /**
  * @author Yaser
  */
-
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @EqualsAndHashCode(of = {"id"})
-@ToString
 public class Notice extends Event {
     private Long newsId;
 

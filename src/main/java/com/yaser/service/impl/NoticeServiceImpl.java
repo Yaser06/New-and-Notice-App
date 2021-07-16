@@ -56,7 +56,7 @@ public class NoticeServiceImpl implements NoticeService {
         notices.setStatus(noticeDto.isStatus());
         notices.setNewsId(noticeDto.getNewsId());
         final Notice noticeDb =noticeRepository.save(notices);
-        noticeDto.setId(noticeDb.getNewsId());
+        noticeDto.setId(noticeDb.getId());
         return noticeDto;
     }
 
@@ -72,6 +72,7 @@ public class NoticeServiceImpl implements NoticeService {
             noticeDto.setContent(it.getContent());
             noticeDto.setDate(it.getDate());
             noticeDto.setStatus(it.isStatus());
+            noticeDto.setNewsId(it.getNewsId());
             noticeDtos.add(noticeDto);
         });
         return noticeDtos;

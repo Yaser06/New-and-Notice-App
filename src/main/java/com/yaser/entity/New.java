@@ -10,14 +10,11 @@ import java.util.List;
 /**
  * @author Yaser
  */
-
+@Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @EqualsAndHashCode(of = {"id"})
-@ToString
 public class New extends Event  {
     private String haberLink;
 }
